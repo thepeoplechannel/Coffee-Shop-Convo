@@ -4,19 +4,26 @@
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .person-list-header {
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 2rem;
 }
 
 .person-list-header h1 {
-  color: #e84393;
   margin: 0;
+  color: #2c3e50;
   font-size: 2.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.person-list-header p {
+  margin: 0.5rem 0 0;
+  color: #666;
 }
 
 .subtitle {
@@ -84,40 +91,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.person-card::before {
-  content: '';
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 40px;
-  height: 40px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e84393'%3E%3Cpath d='M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.9 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z'/%3E%3C/svg%3E");
-  background-size: contain;
-  opacity: 0.2;
-  transform: rotate(-15deg);
-  transition: opacity 0.3s, transform 0.3s;
-}
-
-.person-card::after {
-  content: '';
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  width: 60px;
-  height: 60px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f1c40f'%3E%3Cpath d='M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.9 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z'/%3E%3C/svg%3E");
-  background-size: contain;
-  opacity: 0.2;
-  transform: rotate(15deg);
-  transition: opacity 0.3s, transform 0.3s;
-}
-
-.person-card:hover::before,
-.person-card:hover::after {
-  opacity: 0.3;
-  transform: rotate(0deg);
-}
-
 .person-header {
   display: flex;
   justify-content: space-between;
@@ -139,23 +112,28 @@
   font-size: 0.9rem;
 }
 
-.coffee-info {
-  display: flex;
-  gap: 1rem;
+.flower-info {
+  color: #166534;
+  font-size: 0.9rem;
   margin-bottom: 1rem;
-  color: #e67e22;
 }
 
-.coffee-shop {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.flower-category {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
-.coffee-drink {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.flower-type {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .topics {

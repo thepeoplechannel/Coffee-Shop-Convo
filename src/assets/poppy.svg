@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Center -->
+  <circle cx="50" cy="50" r="10" fill="#4c1d95"/>
+  <!-- Petals -->
+  <path d="M50 30 C55 25 65 30 60 40 C55 45 45 40 50 30" fill="#7c3aed"/>
+  <path d="M70 50 C75 45 85 50 80 60 C75 65 65 60 70 50" fill="#7c3aed"/>
+  <path d="M50 70 C55 65 65 70 60 80 C55 85 45 80 50 70" fill="#7c3aed"/>
+  <path d="M30 50 C35 45 45 50 40 60 C35 65 25 60 30 50" fill="#7c3aed"/>
+  <!-- Stem -->
+  <path d="M50 60 L50 80" stroke="#2d5a27" stroke-width="2" fill="none"/>
+  <!-- Leaf -->
+  <path d="M50 70 C55 68 58 70 56 73 C54 76 50 73 50 70" fill="#2d5a27"/>
+</svg> 

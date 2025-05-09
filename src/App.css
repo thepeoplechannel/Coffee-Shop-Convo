@@ -14,35 +14,44 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
   font-family: Georgia, serif;
-  background-color: #fff5e6;
-  background-image: 
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e67e22'%3E%3Cpath d='M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.9 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233498db'%3E%3Cpath d='M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.9 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e84393'%3E%3Cpath d='M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.9 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z'/%3E%3C/svg%3E");
-  background-size: 100px 100px, 150px 150px, 200px 200px;
-  background-position: 0 0, 50px 50px, 100px 100px;
-  background-repeat: repeat;
   min-height: 100vh;
   color: #2c3e50;
   line-height: 1.6;
+  background: #87CEEB !important;
+  position: relative;
+  overflow-x: hidden;
 }
 
-body::before {
+.sky-overlay {
   content: '';
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f1c40f'%3E%3Cpath d='M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.9 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z'/%3E%3C/svg%3E");
-  background-size: 300px 300px;
-  opacity: 0.1;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='200' height='100' viewBox='0 0 200 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 40c0-16.569 13.431-30 30-30s30 13.431 30 30c0 16.569-13.431 30-30 30S50 56.569 50 40zm60 0c0-16.569 13.431-30 30-30s30 13.431 30 30c0 16.569-13.431 30-30 30s-30-13.431-30-30zm-30 20c0-16.569 13.431-30 30-30s30 13.431 30 30c0 16.569-13.431 30-30 30s-30-13.431-30-30z' fill='%23ffffff' fill-opacity='0.9'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='300' height='150' viewBox='0 0 300 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M75 60c0-24.853 20.147-45 45-45s45 20.147 45 45c0 24.853-20.147 45-45 45s-45-20.147-45-45zm90 0c0-24.853 20.147-45 45-45s45 20.147 45 45c0 24.853-20.147 45-45 45s-45-20.147-45-45zm-45 30c0-24.853 20.147-45 45-45s45 20.147 45 45c0 24.853-20.147 45-45 45s-45-20.147-45-45z' fill='%23ffffff' fill-opacity='0.9'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='250' height='125' viewBox='0 0 250 125' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M62.5 50c0-20.711 16.789-37.5 37.5-37.5s37.5 16.789 37.5 37.5c0 20.711-16.789 37.5-37.5 37.5s-37.5-16.789-37.5-37.5zm75 0c0-20.711 16.789-37.5 37.5-37.5s37.5 16.789 37.5 37.5c0 20.711-16.789 37.5-37.5 37.5s-37.5-16.789-37.5-37.5zm-37.5 25c0-20.711 16.789-37.5 37.5-37.5s37.5 16.789 37.5 37.5c0 20.711-16.789 37.5-37.5 37.5s-37.5-16.789-37.5-37.5z' fill='%23ffffff' fill-opacity='0.9'/%3E%3C/svg%3E");
+  background-size: 200px 100px, 300px 150px, 250px 125px;
+  background-position: 0 0, 100px 50px, 200px 25px;
+  background-repeat: repeat-x;
+  animation: cloudMove 60s linear infinite;
   pointer-events: none;
   z-index: 0;
+}
+
+@keyframes cloudMove {
+  from {
+    background-position: 0 0, 100px 50px, 200px 25px;
+  }
+  to {
+    background-position: 200px 0, 300px 50px, 400px 25px;
+  }
 }
 
 #root {

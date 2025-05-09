@@ -2,10 +2,9 @@ export interface Person {
   id: string;
   name: string;
   role: string;
-  coffeeShop: string;
-  drink: string;
-  conversationTopics: string[];
+  topics: string[];
   notes: string;
+  followUpDate: string;
+  flowerCategory: string;
   dateAdded: string;
-  nextSteps?: string;
 } 
